@@ -18,3 +18,10 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
+
+/aws-mfa
+/bin/
+/dist/
+/badges/
+coverage.out
+coverage.txt
