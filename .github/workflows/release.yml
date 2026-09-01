@@ -44,4 +44,4 @@ jobs:
       - name: Index module on proxy.golang.org
         # Makes `go install github.com/SRARAD/aws-mfa-go/cmd/aws-mfa@${{ github.ref_name }}` resolve quickly.
         run: |
-          curl -fsSL "https://proxy.golang.org/github.com/SRARAD/aws-mfa-go/@v/${GITHUB_REF_NAME}.info" || true
+          curl -fsSL "https://proxy.golang.org/github.com/srarad/aws-mfa-go/@v/${GITHUB_REF_NAME}.info" || true

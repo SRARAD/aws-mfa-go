@@ -52,17 +52,17 @@ jobs:
             coverage.txt
 
       - name: Create badges directory
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') && github.event_name == 'push'
         run: mkdir -p badges
 
       - name: Generate coverage badge
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') && github.event_name == 'push'
         run: |
           chmod +x scripts/coverage-badge.sh
           ./scripts/coverage-badge.sh coverage.out badges/coverage.svg
 
       - name: Push badge to gh-pages branch
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master') && github.event_name == 'push'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |

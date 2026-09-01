@@ -5,8 +5,8 @@
   <a href="https://github.com/SRARAD/aws-mfa-go/actions/workflows/release.yml"><img src="https://github.com/SRARAD/aws-mfa-go/actions/workflows/release.yml/badge.svg" alt="Release"></a>
   <a href="https://github.com/SRARAD/aws-mfa-go/actions/workflows/ci.yml"><img src="https://github.com/SRARAD/aws-mfa-go/raw/gh-pages/badges/coverage.svg" alt="Coverage"></a>
   <a href="https://pkg.go.dev/github.com/SRARAD/aws-mfa-go"><img src="https://pkg.go.dev/badge/github.com/SRARAD/aws-mfa-go.svg" alt="Go Reference"></a>
-  <img src="https://img.shields.io/github/go-mod/go-version/SRARAD/aws-mfa" alt="Go version">
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/SRARAD/aws-mfa" alt="License"></a>
+  <img src="https://img.shields.io/github/go-mod/go-version/SRARAD/aws-mfa-go" alt="Go version">
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/SRARAD/aws-mfa-go" alt="License"></a>
 </p>
 
 A Go CLI that obtains temporary AWS credentials from STS using your long-term IAM keys and an MFA code, then writes them to `~/.aws/credentials`.
@@ -52,7 +52,7 @@ case "$ARCH" in
   x86_64) ARCH=amd64 ;;
   aarch64|arm64) ARCH=arm64 ;;
 esac
-REPO=SRARAD/aws-mfa
+REPO=SRARAD/aws-mfa-go
 TAG=$(curl -fsSL "https://api.github.com/repos/${REPO}/releases/latest" | grep '"tag_name"' | head -1 | cut -d '"' -f4)
 VER=${TAG#v}
 mkdir -p "$HOME/.local/bin"
@@ -65,7 +65,7 @@ Pin a version by replacing `TAG` / `VER` (for example `TAG=v0.1.0` and `VER=0.1.
 If you use the GitHub CLI:
 
 ```sh
-gh release download -R SRARAD/aws-mfa --pattern "aws-mfa_*_linux_amd64.tar.gz"
+gh release download -R SRARAD/aws-mfa-go --pattern "aws-mfa_*_linux_amd64.tar.gz"
 tar xzf aws-mfa_*_linux_amd64.tar.gz
 mv aws-mfa ~/.local/bin/
 ```
@@ -83,7 +83,7 @@ aws-mfa --version
 
 ```sh
 git clone https://github.com/SRARAD/aws-mfa-go.git
-cd aws-mfa
+cd aws-mfa-go
 make install
 ```
 
@@ -209,7 +209,7 @@ make coverage-badge       # coverage.out + badges/coverage.svg
 make build                # compile ./aws-mfa
 ```
 
-CI on every PR and push to `main` builds, runs golangci-lint, and tests. Pushes to `main` also write `badges/coverage.svg` to the `gh-pages` branch (the coverage badge in this README).
+CI on every PR and push to `master` builds, runs golangci-lint, and tests. Pushes to `master` also write `badges/coverage.svg` to the `gh-pages` branch (the coverage badge in this README).
 
 ## Releasing
 
@@ -227,5 +227,5 @@ make release DRY_RUN=1       # print next version only
 Working tree must be clean. Install a released version:
 
 ```sh
-go install github.com/SRARAD/aws-mfa-go/cmd/aws-mfa@v0.1.0
+go install github.com/SRARAD/aws-mfa-go/cmd/aws-mfa@v0.0.1
 ```
