@@ -25,3 +25,7 @@ var/
 /badges/
 coverage.out
 coverage.txt
+
+# binaries should not be checked in.
+aws-mfa/
+aws-mfa-go/

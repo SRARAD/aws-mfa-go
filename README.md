@@ -72,7 +72,7 @@ mv aws-mfa ~/.local/bin/
 
 ### With Go
 
-Requires Go 1.26 or later ([install Go](https://go.dev/doc/install)). `$GOPATH/bin` (usually `~/go/bin`) should be on your `PATH`.
+Requires Go 1.27 or later ([install Go](https://go.dev/doc/install)). `$GOPATH/bin` (usually `~/go/bin`) should be on your `PATH`.
 
 ```sh
 go install github.com/SRARAD/aws-mfa-go/cmd/aws-mfa@latest
