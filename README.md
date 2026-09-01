@@ -1,10 +1,10 @@
 # aws-mfa
 
 <p align="center">
-  <a href="https://github.com/SRARAD/aws-mfa/actions/workflows/ci.yml"><img src="https://github.com/SRARAD/aws-mfa/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
-  <a href="https://github.com/SRARAD/aws-mfa/actions/workflows/release.yml"><img src="https://github.com/SRARAD/aws-mfa/actions/workflows/release.yml/badge.svg" alt="Release"></a>
-  <a href="https://github.com/SRARAD/aws-mfa/actions/workflows/ci.yml"><img src="https://github.com/SRARAD/aws-mfa/raw/gh-pages/badges/coverage.svg" alt="Coverage"></a>
-  <a href="https://pkg.go.dev/github.com/SRARAD/aws-mfa"><img src="https://pkg.go.dev/badge/github.com/SRARAD/aws-mfa.svg" alt="Go Reference"></a>
+  <a href="https://github.com/SRARAD/aws-mfa-go/actions/workflows/ci.yml"><img src="https://github.com/SRARAD/aws-mfa-go/actions/workflows/ci.yml/badge.svg" alt="CI"></a>
+  <a href="https://github.com/SRARAD/aws-mfa-go/actions/workflows/release.yml"><img src="https://github.com/SRARAD/aws-mfa-go/actions/workflows/release.yml/badge.svg" alt="Release"></a>
+  <a href="https://github.com/SRARAD/aws-mfa-go/actions/workflows/ci.yml"><img src="https://github.com/SRARAD/aws-mfa-go/raw/gh-pages/badges/coverage.svg" alt="Coverage"></a>
+  <a href="https://pkg.go.dev/github.com/SRARAD/aws-mfa-go"><img src="https://pkg.go.dev/badge/github.com/SRARAD/aws-mfa-go.svg" alt="Go Reference"></a>
   <img src="https://img.shields.io/github/go-mod/go-version/SRARAD/aws-mfa" alt="Go version">
   <a href="LICENSE"><img src="https://img.shields.io/github/license/SRARAD/aws-mfa" alt="License"></a>
 </p>
@@ -24,7 +24,7 @@ This is a Go rewrite of the original Python `aws-mfa` tool. In addition to the o
 
 ### Binary (no Go)
 
-Browse [GitHub Releases](https://github.com/SRARAD/aws-mfa/releases/latest) and download the archive for your platform:
+Browse [GitHub Releases](https://github.com/SRARAD/aws-mfa-go/releases/latest) and download the archive for your platform:
 
 | Platform | Archive |
 | --- | --- |
@@ -75,14 +75,14 @@ mv aws-mfa ~/.local/bin/
 Requires Go 1.26 or later ([install Go](https://go.dev/doc/install)). `$GOPATH/bin` (usually `~/go/bin`) should be on your `PATH`.
 
 ```sh
-go install github.com/SRARAD/aws-mfa/cmd/aws-mfa@latest
+go install github.com/SRARAD/aws-mfa-go/cmd/aws-mfa@latest
 aws-mfa --version
 ```
 
 ### From source
 
 ```sh
-git clone https://github.com/SRARAD/aws-mfa.git
+git clone https://github.com/SRARAD/aws-mfa-go.git
 cd aws-mfa
 make install
 ```
@@ -213,7 +213,7 @@ CI on every PR and push to `main` builds, runs golangci-lint, and tests. Pushes 
 
 ## Releasing
 
-The current release is tracked in [`VERSION`](VERSION) and as a git tag. Pushing a `v*` tag runs **GoReleaser** and publishes multi-platform CLI binaries to [GitHub Releases](https://github.com/SRARAD/aws-mfa/releases).
+The current release is tracked in [`VERSION`](VERSION) and as a git tag. Pushing a `v*` tag runs **GoReleaser** and publishes multi-platform CLI binaries to [GitHub Releases](https://github.com/SRARAD/aws-mfa-go/releases).
 
 ```sh
 make version                 # show VERSION file + latest tag
@@ -227,5 +227,5 @@ make release DRY_RUN=1       # print next version only
 Working tree must be clean. Install a released version:
 
 ```sh
-go install github.com/SRARAD/aws-mfa/cmd/aws-mfa@v0.1.0
+go install github.com/SRARAD/aws-mfa-go/cmd/aws-mfa@v0.1.0
 ```

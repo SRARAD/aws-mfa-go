@@ -7,8 +7,8 @@ import (
 	"log/slog"
 	"strings"
 
-	"github.com/SRARAD/aws-mfa/internal/awsapi"
-	"github.com/SRARAD/aws-mfa/internal/creds"
+	"github.com/SRARAD/aws-mfa-go/internal/awsapi"
+	"github.com/SRARAD/aws-mfa-go/internal/creds"
 )
 
 // DeviceSource lists MFA devices for the calling user.

@@ -9,9 +9,9 @@ import (
 	"path/filepath"
 	"testing"
 
-	"github.com/SRARAD/aws-mfa/internal/awsapi"
-	"github.com/SRARAD/aws-mfa/internal/creds"
-	"github.com/SRARAD/aws-mfa/internal/prompt"
+	"github.com/SRARAD/aws-mfa-go/internal/awsapi"
+	"github.com/SRARAD/aws-mfa-go/internal/creds"
+	"github.com/SRARAD/aws-mfa-go/internal/prompt"
 )
 
 type stubDevices struct {

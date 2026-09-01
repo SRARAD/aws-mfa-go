@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	"github.com/SRARAD/aws-mfa/internal/cli"
+	"github.com/SRARAD/aws-mfa-go/internal/cli"
 )
 
 // version is set at link time via -ldflags "-X main.version=...".

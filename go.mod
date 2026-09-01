@@ -1,4 +1,4 @@
-module github.com/SRARAD/aws-mfa
+module github.com/SRARAD/aws-mfa-go
 
 go 1.26
 

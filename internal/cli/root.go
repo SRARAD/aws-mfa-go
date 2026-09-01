@@ -6,8 +6,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/SRARAD/aws-mfa/internal/app"
-	"github.com/SRARAD/aws-mfa/internal/prompt"
+	"github.com/SRARAD/aws-mfa-go/internal/app"
+	"github.com/SRARAD/aws-mfa-go/internal/prompt"
 )
 
 func NewRoot(version string) *cobra.Command {

@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/SRARAD/aws-mfa/internal/creds"
+	"github.com/SRARAD/aws-mfa-go/internal/creds"
 )
 
 func (a *App) Setup(ctx context.Context, opts Options) error {

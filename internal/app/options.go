@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/SRARAD/aws-mfa/internal/prompt"
+	"github.com/SRARAD/aws-mfa-go/internal/prompt"
 )
 
 const (
